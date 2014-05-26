@@ -187,3 +187,57 @@ void test_telephone_leading_zero_should_return_0(void)
  UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)95, UNITY_DISPLAY_STYLE_INT);
 
 }
+
+
+
+void test_firstName_whether_is_empty_or_not_and_return_0(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setFirstName(&PersonInfo,"");
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)104, UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_firstName_character_buffer_size_and_return_1(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setFirstName(&PersonInfo,"HaahAA");
+
+ UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)113, UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_firstName_character_buffer_size_and_return_0(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setFirstName(&PersonInfo,"ABCDFGERTYUTRWEAaSdas");
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)122, UNITY_DISPLAY_STYLE_INT);
+
+}

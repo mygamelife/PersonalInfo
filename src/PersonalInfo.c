@@ -32,7 +32,6 @@ int setHeight(PersonInfo *info , float height)
 
 int setTelephone(PersonInfo *info , unsigned long int telephone)
 {
-	int count = 0; //counter
 	info->telephone = telephone;
 	
 	if((info->telephone/10000000)==0) //check if telephone is leading zero
@@ -45,3 +44,25 @@ int setTelephone(PersonInfo *info , unsigned long int telephone)
 	return 1;
 }
 
+int setFirstName(PersonInfo *info, char *name)
+{
+	int i=0, char_size=0;
+	if(name[0] == '\0')
+	return 0;
+	
+	else if(name[0] != '\0') 
+	{
+		while(name[i] != '\0') //read character from buffer until terminate '\0' is found
+		{
+			char_size++; //update character size
+			i++; //update while loop
+		}
+		
+		if(char_size < 21) //if character size less than 21 is valid
+		info->firstName = name; //insert name into struct firstname
+		return 1;	
+	}
+	
+	else
+		return 0; //else invalid
+}

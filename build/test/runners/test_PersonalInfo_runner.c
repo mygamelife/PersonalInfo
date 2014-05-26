@@ -39,6 +39,9 @@ extern void test_telephone_num_range_should_return_1(void);
 extern void test_telephone_num_more_than_8_range_should_return_0(void);
 extern void test_telephone_num_less_than_8_range_should_return_0(void);
 extern void test_telephone_leading_zero_should_return_0(void);
+extern void test_firstName_whether_is_empty_or_not_and_return_0(void);
+extern void test_firstName_character_buffer_size_and_return_1(void);
+extern void test_firstName_character_buffer_size_and_return_0(void);
 
 
 //=======Test Reset Option=====
@@ -63,6 +66,9 @@ int main(void)
   RUN_TEST(test_telephone_num_more_than_8_range_should_return_0, 71);
   RUN_TEST(test_telephone_num_less_than_8_range_should_return_0, 80);
   RUN_TEST(test_telephone_leading_zero_should_return_0, 89);
+  RUN_TEST(test_firstName_whether_is_empty_or_not_and_return_0, 98);
+  RUN_TEST(test_firstName_character_buffer_size_and_return_1, 107);
+  RUN_TEST(test_firstName_character_buffer_size_and_return_0, 116);
 
   return (UnityEnd());
 }

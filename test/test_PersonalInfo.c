@@ -100,6 +100,24 @@ void test_firstName_whether_is_empty_or_not_and_return_0(void)
 	int ans;
 	struct PersonInfo_t PersonInfo;
 	
-	ans = setTelephone(&PersonInfo,"");
+	ans = setFirstName(&PersonInfo,"");
+	TEST_ASSERT_EQUAL(0 , ans);
+}
+
+void test_firstName_character_buffer_size_and_return_1(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
+	
+	ans = setFirstName(&PersonInfo,"HaahAA");
+	TEST_ASSERT_EQUAL(1 , ans);
+}
+
+void test_firstName_character_buffer_size_and_return_0(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
+	
+	ans = setFirstName(&PersonInfo,"ABCDFGERTYUTRWEAaSdas");
 	TEST_ASSERT_EQUAL(0 , ans);
 }
