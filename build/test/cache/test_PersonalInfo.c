@@ -115,3 +115,23 @@ void test_height_less_than_or_equal_zero_and_return_0(void)
  UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)59, UNITY_DISPLAY_STYLE_INT);
 
 }
+
+
+
+void test_telephone_num_range_should_return_1(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setTelephone(&PersonInfo,12556547);
+
+
+
+ UnityAssertEqualNumber((_U_SINT)((8)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)69, UNITY_DISPLAY_STYLE_INT);
+
+}

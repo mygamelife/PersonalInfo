@@ -64,7 +64,7 @@ void test_telephone_num_range_should_return_1(void)
 	int ans;
 	struct PersonInfo_t PersonInfo;
 	
-	ans = setTelephone(&PersonInfo,0);
+	ans = setTelephone(&PersonInfo,12556547);
 	
-	TEST_ASSERT_EQUAL(0 , ans);
+	TEST_ASSERT_EQUAL(8 , ans);
 }

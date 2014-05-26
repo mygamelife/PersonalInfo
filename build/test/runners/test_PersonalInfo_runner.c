@@ -35,6 +35,7 @@ extern void test_age_negative_value_and_return_0(void);
 extern void test_age_largest_value_and_return_0(void);
 extern void test_height_equal_to_3_and_return_1(void);
 extern void test_height_less_than_or_equal_zero_and_return_0(void);
+extern void test_telephone_num_range_should_return_1(void);
 
 
 //=======Test Reset Option=====
@@ -55,6 +56,7 @@ int main(void)
   RUN_TEST(test_age_largest_value_and_return_0, 32);
   RUN_TEST(test_height_equal_to_3_and_return_1, 42);
   RUN_TEST(test_height_less_than_or_equal_zero_and_return_0, 52);
+  RUN_TEST(test_telephone_num_range_should_return_1, 62);
 
   return (UnityEnd());
 }

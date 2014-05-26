@@ -18,14 +18,15 @@ int setAge(PersonInfo *info , int age)
 
 int setHeight(PersonInfo *info , float height)
 {
+	int count = 0; //counter
 	info->height = height;
 	
-	if(info->height > 3)
-	return 0;
+	for(info->height ; info->height > 0 ; count++)
+	{
+		info->height / 10;
+	}
 	
-	else if(info->height <= 0)
-	return 0;
-	
-	else
-	return 1;
+	return count;	
 }
+
+
