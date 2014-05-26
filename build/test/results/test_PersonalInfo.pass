@@ -18,11 +18,23 @@
 - :test: test_height_less_than_or_equal_zero_and_return_0
   :line: 52
   :message: ''
+- :test: test_telephone_num_range_should_return_1
+  :line: 62
+  :message: ''
+- :test: test_telephone_num_more_than_8_range_should_return_0
+  :line: 71
+  :message: ''
+- :test: test_telephone_num_less_than_8_range_should_return_0
+  :line: 80
+  :message: ''
+- :test: test_telephone_leading_zero_should_return_0
+  :line: 89
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 5
-  :passed: 5
+  :total: 9
+  :passed: 9
   :failed: 0
   :ignored: 0
 :stdout: []

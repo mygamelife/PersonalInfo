@@ -130,8 +130,60 @@ void test_telephone_num_range_should_return_1(void)
 
  ans = setTelephone(&PersonInfo,12556547);
 
+ UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)68, UNITY_DISPLAY_STYLE_INT);
+
+}
 
 
- UnityAssertEqualNumber((_U_SINT)((8)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)69, UNITY_DISPLAY_STYLE_INT);
+
+void test_telephone_num_more_than_8_range_should_return_0(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setTelephone(&PersonInfo,123456789);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)77, UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_telephone_num_less_than_8_range_should_return_0(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setTelephone(&PersonInfo,1234);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)86, UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+void test_telephone_leading_zero_should_return_0(void)
+
+{
+
+ int ans;
+
+ struct PersonInfo_t PersonInfo;
+
+
+
+ ans = setTelephone(&PersonInfo,00234);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((ans)), (((void *)0)), (_U_UINT)95, UNITY_DISPLAY_STYLE_INT);
 
 }

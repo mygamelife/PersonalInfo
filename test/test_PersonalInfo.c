@@ -65,6 +65,41 @@ void test_telephone_num_range_should_return_1(void)
 	struct PersonInfo_t PersonInfo;
 	
 	ans = setTelephone(&PersonInfo,12556547);
+	TEST_ASSERT_EQUAL(1 , ans);
+}
+
+void test_telephone_num_more_than_8_range_should_return_0(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
 	
-	TEST_ASSERT_EQUAL(8 , ans);
+	ans = setTelephone(&PersonInfo,123456789);
+	TEST_ASSERT_EQUAL(0 , ans);
+}
+
+void test_telephone_num_less_than_8_range_should_return_0(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
+	
+	ans = setTelephone(&PersonInfo,1234);
+	TEST_ASSERT_EQUAL(0 , ans);
+}
+
+void test_telephone_leading_zero_should_return_0(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
+	
+	ans = setTelephone(&PersonInfo,00234);
+	TEST_ASSERT_EQUAL(0 , ans);
+}
+
+void test_firstName_whether_is_empty_or_not_and_return_0(void)
+{
+	int ans;
+	struct PersonInfo_t PersonInfo;
+	
+	ans = setTelephone(&PersonInfo,"");
+	TEST_ASSERT_EQUAL(0 , ans);
 }

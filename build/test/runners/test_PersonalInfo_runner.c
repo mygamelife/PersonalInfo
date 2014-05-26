@@ -36,6 +36,9 @@ extern void test_age_largest_value_and_return_0(void);
 extern void test_height_equal_to_3_and_return_1(void);
 extern void test_height_less_than_or_equal_zero_and_return_0(void);
 extern void test_telephone_num_range_should_return_1(void);
+extern void test_telephone_num_more_than_8_range_should_return_0(void);
+extern void test_telephone_num_less_than_8_range_should_return_0(void);
+extern void test_telephone_leading_zero_should_return_0(void);
 
 
 //=======Test Reset Option=====
@@ -57,6 +60,9 @@ int main(void)
   RUN_TEST(test_height_equal_to_3_and_return_1, 42);
   RUN_TEST(test_height_less_than_or_equal_zero_and_return_0, 52);
   RUN_TEST(test_telephone_num_range_should_return_1, 62);
+  RUN_TEST(test_telephone_num_more_than_8_range_should_return_0, 71);
+  RUN_TEST(test_telephone_num_less_than_8_range_should_return_0, 80);
+  RUN_TEST(test_telephone_leading_zero_should_return_0, 89);
 
   return (UnityEnd());
 }
